@@ -20,7 +20,6 @@ Users should be able to:
 
 
 ### Links
-https://pod-request-access-landing-page-gilt.vercel.app/
 
 - Live Site URL: [(https://pod-request-access-landing-page-gilt.vercel.app/)](https://pod-request-access-landing-page-gilt.vercel.app/)
 
