@@ -1,0 +1,371 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { 
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+:root{
+    --green: #54E6AF;
+    --greyish: #C2CBE5;
+    --grey: #2C344B;
+    --dark-bcg: #121725;
+}
+
+body{
+    color: white;
+    font-family: "Chivo";
+}
+
+.hidden{
+    display: none;
+}
+
+.bcg{
+    background-color: rgba(18,23,37,1.0);
+    height: auto;
+    width: 100%;
+    position: absolute;
+}
+
+.bcg::before{
+    content: "";
+    background-image: url(assets/mobile/image-host.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.07;
+}
+
+.wrapper{
+    padding: 3.875rem 1.5rem 6rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-info{
+    margin-top: 3.5625rem;
+    margin-bottom: 2.0625rem;
+    text-align: center;
+}
+
+.title{
+    font-weight: lighter;
+    font-size: 1.63rem;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    line-height: 2.38rem;
+}
+
+.white-accent{
+    color: white; 
+}
+
+.description{
+    font-size: 0.94rem;
+    font-weight: lighter;
+    text-align: center;
+    line-height: 1.56rem;
+    color: var(--greyish);
+}
+
+.social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.spotify{
+    width: 56px;
+    height: 17px;
+    margin-right: 1.4375rem;
+}
+
+.apple{
+    width: 45px;
+    height: 17px;
+    margin-right: 1.5625rem;
+}
+
+.google{
+    width: 73px;
+    height: 11px;
+    margin-right: 1rem;
+}
+
+.pocket{
+    width: 77px;
+    height: 15px;
+}
+
+.spotify, .apple, .google, .pocket{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.spotify:hover, .apple:hover, .google:hover, .pocket:hover{
+    opacity: 0.5;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding: 0.8rem;
+    padding-left: 2rem;
+    border: none;
+    outline: none;
+    background-color: var(--grey);
+    color: white;
+    z-index: 1;
+    border-radius: 28px;
+    margin-bottom: 1rem;
+}
+
+input::placeholder{
+    color: white;
+    opacity: 0.5;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--grey) inset !important;
+    -webkit-text-fill-color: #ffffff;
+}
+
+.error{
+    color: #FB3E3E;
+    margin-left: 0.4rem;
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+}
+
+.submit-btn{
+    z-index: 1;
+    border: none;
+    outline: none;
+    border-radius: 1.75rem;
+    padding: 0.85rem;
+    font-weight: bold;
+    background-color: var(--green);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background-color: #B3FFE2;
+}
+
+@media screen and (min-height: 695px){
+    .bcg{
+        height: 100vh;
+    }
+}
+
+
+@media screen and (min-width:768px){
+    .bcg{
+        background-color: var(--dark-bcg);
+        position: relative;
+        z-index: 1;
+    }
+    .bcg::before{
+        display: none;
+    }
+    .image-host-tablet{
+        display: block;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }  
+    .wrapper{
+        padding-left: 2.4375rem;
+        padding-top: 3.125rem;
+        padding-bottom: 0;
+        align-items:flex-start;
+    } 
+    .main-info{
+        background-color:#121725;
+        margin-top: 9.5rem;
+        margin-bottom: 0;
+        padding-top: 5.8125rem;
+        max-width: 39.6875rem;
+    } 
+    .title{
+        text-align: left;
+        font-size: 3rem;
+        margin-bottom: 1.9375rem;
+        line-height: 3.50rem;
+    }   
+    .description{
+        font-size: 1.13rem;
+        text-align: left;
+        line-height: 1.75rem;
+        width: 70%;
+        padding-bottom: 2.5rem;
+    } 
+    .reverse-place{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: var(--dark-bcg);
+    }
+    .social-media{
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        margin-top: 4rem;
+    }
+    .spotify{
+        width: 96px;
+        height: 29px;
+        margin-right: 2.5rem;
+    }  
+    .apple{
+        width: 78px;
+        height: 29px;
+        margin-right: 2.5625rem;
+    } 
+    .google{
+        width: 125px;
+        height: 18px;
+        margin-right: 1.6875rem;
+    } 
+    .pocket{
+        width: 129px;
+        height: 26px;
+    } 
+    form{
+        flex-direction: row;
+    } 
+    input{
+        padding: 1.25rem 13.6rem;
+        padding-left: 1.5rem;
+        margin-bottom: 0;
+    }
+    .error{
+        position: absolute;
+        bottom: 6rem;
+        margin-left: 0.5rem;
+    }    
+    .submit-btn{
+        position: absolute;
+        top: 0.4rem;
+        right: 13rem;
+        padding: 0.9rem 1rem;
+    }
+    .pattern-dots{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+
+
+@media screen and (min-width:1440px){
+    .image-host-tablet{
+        display: none;
+    }
+    .image-host-desktop{
+        display: block;
+        z-index: -1;
+        position: absolute;
+        right: 0;
+        margin-top: 8.125rem;
+    }
+    .wrapper{
+        padding-left: 10.3125rem;
+        padding-top: 6.375rem;
+        padding-bottom: 7.7rem;
+    } 
+    .main-info{
+        margin-top: 6.4375rem;
+        padding-top: 5.5rem;
+        max-width: 45.1875rem;
+    } 
+    .title{
+        font-size: 3.25rem;
+        margin-bottom: 1.5rem;
+        line-height: 3.88rem;
+    }   
+    .description{
+        width: 62%;
+    } 
+    .submit-btn{
+        top: 0.35rem;
+        right: 18.4rem;
+        padding: 0.9rem 1.4rem;
+    }
+    .pattern-dots{
+        right: 0;
+        bottom: 6rem;
+    }
+}
+
+
